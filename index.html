@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <title>FEMA Disaster Declaration</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Mako&family=Marcellus&family=Open+Sans:wght@500&family=Source+Sans+Pro:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class='title-container'>
+        <p class="tag">DISASTER DECLARATION</p>
+        <h1>Mapping the 2020 US presidential election</h1>
+        <p class="byline">By Chuqin Jiang</p>
+        <p class="date">Jan 17, 2023</p>
+    </div>
+    <div class='text-container'>
+        <p>This is a choropleth map containing both state and county level disaster declaration data. The color represent different types of main disasters. You can zoom in to see each county's info. If you click each state/county, you can see the main type and the number of historical declaration in detail.</p>
+        <p>This map can give readers a sense of what major type of disaster in the area they are living in.</p>
+    </div>
+    <div id='map-choropleth'>
+        <script type='text/javascript' src="map-choropleth.js"></script>
+    </div>
+    
+    <div class='text-container'>
+        <p>This is a line chart showing the trend of declared disaster. The COVID-19 declarations have been removed from the list.</p>
+        <img src="disasterdeclaration.png">
+    </div>
+    <div class="tail">
+        <p>If you are interested in my data analysis process, you can find the notebook <a href="">here</a>.</p>
+        <p>The FEMA disaster declaration data can be downloaded <a href="https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2">here</a>.</p>
+    </div>
+</body>
+</html>
